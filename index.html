@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>shopping</title>
+  </head>
+  <link rel="stylesheet" href="index.css" />
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="logo">VENIA</div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Smart Gear</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accessories</a>
+            </li>
+          </ul>
+          <div class="cart">
+            <img class="" src="img/shopping-bag.svg" />
+            <span> 10</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="row">
+        <div class="banner-left">
+          <h2>
+            Men’s
+            <br />
+            Outerwear
+          </h2>
+        </div>
+        <div class="banner-right">
+          <img class="" src="img/banner.PNG" />
+        </div>
+      </div>
+    </section>
+    <section class="shop">
+      <div class="container">
+        <div class="row">
+          <div class="shop-left">
+            <p class="cate">Clothing / Women’s / Outerwear</p>
+            <p class="filter-head">Filters</p>
+            <div class="catgories">
+              <p class="cate-head">Categories</p>
+              <label class="checkarea">
+                <input type="checkbox" id="jewelery" data-category="jewelery" />
+
+                <span class="customcheck"></span>
+                <p style="margin: 0; margin-left: 35px">Jewellery</p>
+              </label>
+              <label class="checkarea">
+                <input
+                  type="checkbox"
+                  id="electronics"
+                  data-category="electronics"
+                />
+                <span class="customcheck"></span>
+                <p style="margin: 0; margin-left: 35px">Electronics</p>
+              </label>
+              <label class="checkarea">
+                <input
+                  type="checkbox"
+                  id="men-clothing"
+                  data-category="men's clothing"
+                />
+
+                <span class="customcheck"></span>
+                <p style="margin: 0; margin-left: 35px">Men's Clothing</p>
+              </label>
+              <label class="checkarea">
+                <input
+                  type="checkbox"
+                  id="women-clothing"
+                  data-category="women's clothing"
+                />
+
+                <input
+                  type="checkbox"
+                  class="category-filter"
+                  value="women's clothing"
+                />
+                <span class="customcheck"></span>
+                <p style="margin: 0; margin-left: 35px">Women's Clothing</p>
+              </label>
+            </div>
+            <br />
+            <p class="cate-head">Price Range</p>
+            <input
+              type="range"
+              id="min-price"
+              min="0"
+              max="1000"
+              step="10"
+              value="0"
+            />
+            <label for="min-price"
+              >Min Price: <span id="min-price-value">0</span></label
+            >
+            <input
+              type="range"
+              id="max-price"
+              min="0"
+              max="1000"
+              step="10"
+              value="1000"
+            />
+            <label for="max-price"
+              >Max Price: <span id="max-price-value">1000</span></label
+            >
+          </div>
+          <div class="shop-right">
+            <div class="inner-row">
+              <div class="search">
+                <input
+                  type="text"
+                  id="search"
+                  placeholder="Search for products..."
+                />
+              </div>
+              <select id="sort">
+                <option value="select">Sort by price</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+              </select>
+            </div>
+            <div class="loading" id="loading" style="display: none">
+              <div class="shimmer"></div>
+            </div>
+            <div class="products" id="product-list"></div>
+            <div class="no-products" id="no-products" style="display: none">
+              No products found.
+            </div>
+            <button id="load-more" style="display: none">Load More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <ul class="footer-wrapper">
+              <li>
+                <strong class="footer-title">Account</strong>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Sign In</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Register</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Order Status</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="footer-wrapper">
+              <li>
+                <strong class="footer-title">About Us</strong>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Our Story</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="footer-wrapper">
+              <li>
+                <strong class="footer-title">Help</strong>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Order Status</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Returns</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="footer-wrapper">
+              <li>
+                <strong class="footer-title">Follow Us!</strong>
+              </li>
+              <li>
+                <p href="#" class="footer-link">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </li>
+              <li style="display: flex; gap: 5px">
+                <a href="#" class="footer-link">
+                  <img src="img/instagram-logo-thin.svg" width="20px" />
+                </a>
+
+                <a href="#" class="footer-link">
+                  <img src="img/facebook.svg" width="20px" />
+                </a>
+
+                <a href="#" class="footer-link">
+                  <img src="img/message.png" width="20px" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="logo">VENIA</div>
+            <p class="msg">© Company Name Address Ave, City Name, State ZIP</p>
+            <div style="display: flex; gap: 10px">
+              <a href="#" class="link">Terms of Use</a>
+              <a href="#" class="link">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
