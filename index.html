@@ -10,23 +10,90 @@
       <div class="container">
         <div class="row">
           <div class="logo">VENIA</div>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Women</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Men</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Smart Gear</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accessories</a>
-            </li>
-          </ul>
+          <div id="mainListDiv" class="main_list">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Men</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Smart Gear</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Accessories</a>
+              </li>
+            </ul>
+            <img
+              src="img/Hamburger_icon.svg.png"
+              class="Hamburger_icon"
+              onclick="openNav()"
+            />
+            <div id="mySidenav" class="sidenav">
+              <div class="side-wrapper">
+                <p class="filter-head">Filters</p>
+
+                <a
+                  href="javascript:void(0)"
+                  onclick="closeNav()"
+                  >&times;</a
+                >
+
+              </div>
+              <a href="#" class="clearall">Clear all</a>
+              <div class="catgories">
+                <p class="cate-head">Categories</p>
+                <label class="checkarea">
+                  <input
+                    style="opacity: 0"
+                    type="checkbox"
+                    id="jewelery"
+                    data-category="jewelery"
+                  />
+
+                  <span class="customcheck"></span>
+                  <p style="margin: 0; margin-left: 35px">Jewellery</p>
+                </label>
+                <label class="checkarea">
+                  <input
+                    style="opacity: 0"
+                    type="checkbox"
+                    id="electronics"
+                    data-category="electronics"
+                  />
+                  <span class="customcheck"></span>
+                  <p style="margin: 0; margin-left: 35px">Electronics</p>
+                </label>
+                <label class="checkarea">
+                  <input
+                    style="opacity: 0"
+                    type="checkbox"
+                    id="men-clothing"
+                    data-category="men's clothing"
+                  />
+
+                  <span class="customcheck"></span>
+                  <p style="margin: 0; margin-left: 35px">Men's Clothing</p>
+                </label>
+                <label class="checkarea">
+                  <input
+                    style="opacity: 0"
+                    type="checkbox"
+                    id="women-clothing"
+                    data-category="women's clothing"
+                  />
+
+                  <span class="customcheck"></span>
+                  <p style="margin: 0; margin-left: 35px">Women's Clothing</p>
+                </label>
+              </div>
+            </div>
+          </div>
+
           <div class="cart">
             <img class="" src="img/shopping-bag.svg" />
             <span> 10</span>
@@ -53,17 +120,27 @@
         <div class="row">
           <div class="shop-left">
             <p class="cate">Clothing / Women’s / Outerwear</p>
+            <div class="Filter-result">
+              <a href="#"><img src="img/sliders.svg" /> Results</a>
+              <a href="#"><img src="img/swap_vert.svg" />Sort Products</a>
+            </div>
             <p class="filter-head">Filters</p>
             <div class="catgories">
               <p class="cate-head">Categories</p>
               <label class="checkarea">
-                <input type="checkbox" id="jewelery" data-category="jewelery" />
+                <input
+                  style="opacity: 0"
+                  type="checkbox"
+                  id="jewelery"
+                  data-category="jewelery"
+                />
 
                 <span class="customcheck"></span>
                 <p style="margin: 0; margin-left: 35px">Jewellery</p>
               </label>
               <label class="checkarea">
                 <input
+                  style="opacity: 0"
                   type="checkbox"
                   id="electronics"
                   data-category="electronics"
@@ -73,6 +150,7 @@
               </label>
               <label class="checkarea">
                 <input
+                  style="opacity: 0"
                   type="checkbox"
                   id="men-clothing"
                   data-category="men's clothing"
@@ -83,44 +161,42 @@
               </label>
               <label class="checkarea">
                 <input
+                  style="opacity: 0"
                   type="checkbox"
                   id="women-clothing"
                   data-category="women's clothing"
                 />
 
-                <input
-                  type="checkbox"
-                  class="category-filter"
-                  value="women's clothing"
-                />
                 <span class="customcheck"></span>
                 <p style="margin: 0; margin-left: 35px">Women's Clothing</p>
               </label>
             </div>
             <br />
-            <p class="cate-head">Price Range</p>
-            <input
-              type="range"
-              id="min-price"
-              min="0"
-              max="1000"
-              step="10"
-              value="0"
-            />
-            <label for="min-price"
-              >Min Price: <span id="min-price-value">0</span></label
-            >
-            <input
-              type="range"
-              id="max-price"
-              min="0"
-              max="1000"
-              step="10"
-              value="1000"
-            />
-            <label for="max-price"
-              >Max Price: <span id="max-price-value">1000</span></label
-            >
+            <div class="price-range">
+              <p class="cate-head">Price Range</p>
+              <input
+                type="range"
+                id="min-price"
+                min="0"
+                max="1000"
+                step="10"
+                value="0"
+              />
+              <label for="min-price"
+                >Min Price: <span id="min-price-value">0</span></label
+              >
+              <input
+                type="range"
+                id="max-price"
+                min="0"
+                max="1000"
+                step="10"
+                value="1000"
+              />
+              <label for="max-price"
+                >Max Price: <span id="max-price-value">1000</span></label
+              >
+            </div>
           </div>
           <div class="shop-right">
             <div class="inner-row">
@@ -239,5 +315,14 @@
       </div>
     </footer>
     <script src="index.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>

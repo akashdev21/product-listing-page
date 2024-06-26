@@ -1,18 +1,3 @@
-// const hamburgerMenu = document.querySelector('.hamburger-menu');
-// const drawer = document.querySelector('.drawer');
-// const drawerOverlay = document.querySelector('.drawer-overlay');
-
-// hamburgerMenu.addEventListener('click', () => {
-//   drawer.classList.toggle('open');
-//   drawerOverlay.style.display = drawer.classList.contains('open') ? 'block' : 'none';
-// });
-
-// drawerOverlay.addEventListener('click', () => {
-//   drawer.classList.remove('open');
-//   drawerOverlay.style.display = 'none';
-// });
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const productList = document.getElementById("product-list");
   const noProductsMessage = document.getElementById("no-products");
@@ -63,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productElement.classList.add("product");
 
         productElement.innerHTML = `
-                    <img src="${product.image}" alt="${product.title}">
+                    <img src="${product.image}" alt="${product.title}" style="max-height: 300px;">
                     <p class="product-name">${product.title}</p>
                     <p class="product-price">$${product.price}</p>
                     <img src="img/heart.svg" class="heart" alt="">
